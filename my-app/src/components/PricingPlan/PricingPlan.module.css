@@ -1,0 +1,13 @@
+.pricingPlan {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding-inline-start: 0px;
+  margin-top: 30px;
+}
+.item {
+  width: 400px;
+  margin-left: 25px;
+  margin-right: 25px;
+  background: white;
+}

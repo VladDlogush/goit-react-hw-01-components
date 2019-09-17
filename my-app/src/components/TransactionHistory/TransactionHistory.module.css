@@ -1,0 +1,22 @@
+.transactionHistory {
+  margin: 0 auto;
+  width: 874px;
+  border-collapse: collapse;
+}
+.headerTable {
+  height: 52px;
+  background: #00bcd4;
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.list {
+  font-size: 15px;
+  color: rgb(92, 105, 117);
+  height: 52px;
+  background: #ecf2f3;
+}
+.list:nth-child(2n) {
+  background: #dde3e4;
+}

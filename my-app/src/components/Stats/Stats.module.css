@@ -1,0 +1,42 @@
+.statsSection {
+  height: 112px;
+  width: 280px;
+  margin: 0 auto;
+  background: white;
+}
+.title {
+  padding-top: 15px;
+  color: rgb(71, 89, 101);
+}
+.statList {
+  display: flex;
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+.item {
+  height: 60px;
+  width: 70px;
+  background-color: blueviolet;
+}
+.label {
+  margin-top: 9px;
+  display: block;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+.percentage {
+  margin-top: 2px;
+  display: block;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+._32_ {
+  font-size: 18px;
+  font-family: 'ProximaNova';
+  color: rgb(255, 255, 255);
+  line-height: 1.111;
+  position: absolute;
+  left: 69.515px;
+  top: 159.001px;
+  z-index: 23;
+}
