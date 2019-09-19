@@ -1,14 +1,24 @@
+/* eslint-disable */
 .icon {
   display: block;
   margin-bottom: 30px;
   margin-top: 165px;
   margin-left: 22%;
 }
-.label {
+.labelBronze {
   margin-bottom: 15px;
   font-size: 30px;
   font-weight: 500;
   text-transform: uppercase;
+  color: rgb(221, 124, 75);
+}
+.labelSilver {
+  composes: labelBronze;
+  color: #c0c0c0;
+}
+.labelGold {
+  composes: labelBronze;
+  color: #dda431;
 }
 .capacity {
   font-size: 17px;
@@ -30,7 +40,7 @@
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-.button {
+.buttonBronze {
   height: 52px;
   width: 240px;
   background-color: rgb(221, 124, 75);
@@ -41,4 +51,12 @@
   font-size: 15px;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
+}
+.buttonSilver {
+  composes: buttonBronze;
+  background-color: #c0c0c0;
+}
+.buttonGold {
+  composes: buttonBronze;
+  background-color: #dda431;
 }

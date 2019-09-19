@@ -27,22 +27,10 @@ const stats = [
   { id: 'id-5', label: '.pdf', percentage: 10 },
 ];
 
-function randomColor() {
-  const allowed = 'ABCDEF0123456789';
-  let S = '#';
-
-  while (S.length < 7) {
-    S += allowed.charAt(Math.floor(Math.random() * 16 + 1));
-  }
-  return S;
-}
-
-const color = `${randomColor()}`;
-
 const App = () => (
   <div className="App">
     <Profile user={user} />
-    <Stats title="Upload stats" stats={stats} color={color} />
+    <Stats title="Upload stats" stats={stats} />
     <PricingPlan items={pricingPlanItems} />,
     <TransactionHistory items={transactions} />
   </div>

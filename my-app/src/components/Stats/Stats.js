@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Stats.module.css';
+import color from './randomColor';
 
-const Stats = ({ title, stats = [], color }) => {
+const Stats = ({ title, stats = [] }) => {
   return (
     <section className={styles.statsSection}>
       <h2 className={styles.title}>{title}</h2>
@@ -11,7 +12,7 @@ const Stats = ({ title, stats = [], color }) => {
         {stats.map(stat => (
           <li
             className={styles.item}
-            style={{ backgroundColor: color }}
+            style={{ backgroundColor: `${color()}` }}
             key={stat.id}
           >
             <span className={styles.label}>{stat.label}</span>
@@ -36,7 +37,6 @@ Stats.propTypes = {
       percentage: PropTypes.number.isRequired,
     }).isRequired,
   ).isRequired,
-  color: PropTypes.string.isRequired,
 };
 
 export default Stats;

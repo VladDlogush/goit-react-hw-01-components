@@ -11,6 +11,10 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+.border {
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+}
 .list {
   font-size: 15px;
   color: rgb(92, 105, 117);

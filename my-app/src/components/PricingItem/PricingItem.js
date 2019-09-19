@@ -1,19 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './PricingItem.module.css';
+import pricingPlanItems from '../../pricing-plan.json';
+
+const linkicon = pricingPlanItems.map(item => {
+  const valueItem = Object.values(item);
+
+  return valueItem[1];
+});
 
 const PricingItem = ({ item = [] }) => {
   const { label, icon, capacity, price, description } = item;
   return (
     <div className={styles.pricingItem}>
       <img src={icon} alt="icon" className={styles.icon} />
-      <h2 className={styles.label}>{label}</h2>
+      {(icon === linkicon[0] && (
+        <h2 className={styles.labelBronze}>{label}</h2>
+      )) ||
+        (icon === linkicon[1] && (
+          <h2 className={styles.labelSilver}>{label}</h2>
+        )) ||
+        (icon === linkicon[2] && <h2 className={styles.labelGold}>{label}</h2>)}
       <p className={styles.capacity}>{capacity} Storage</p>
       <p className={styles.description}>{description}</p>
       <p className={styles.price}>${price}/MO</p>
-      <button className={styles.button} type="button">
-        Get Started
-      </button>
+      {(icon === linkicon[0] && (
+        <button className={styles.buttonBronze} type="button">
+          Get Started
+        </button>
+      )) ||
+        (icon === linkicon[1] && (
+          <button className={styles.buttonSilver} type="button">
+            Get Started
+          </button>
+        )) ||
+        (icon === linkicon[2] && (
+          <button className={styles.buttonGold} type="button">
+            Get Started
+          </button>
+        ))}
     </div>
   );
 };

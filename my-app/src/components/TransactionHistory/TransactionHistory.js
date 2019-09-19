@@ -8,7 +8,7 @@ const TransactionHistory = ({ items = [] }) => {
       <thead>
         <tr className={styles.headerTable}>
           <th>Type</th>
-          <th>Amount</th>
+          <th className={styles.border}>Amount</th>
           <th>Currency</th>
         </tr>
       </thead>
@@ -16,7 +16,7 @@ const TransactionHistory = ({ items = [] }) => {
         {items.map(item => (
           <tr key={item.id} className={styles.list}>
             <td>{item.type}</td>
-            <td>{item.amount}</td>
+            <td className={styles.border}>{item.amount}</td>
             <td>{item.currency}</td>
           </tr>
         ))}
